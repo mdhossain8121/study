@@ -1,3 +1,21 @@
+class PackageList{
+  List<PackageListItemModel?>? packageList;
+
+  PackageList.fromJson(List<PackageListItemModel?>? json){
+    print("PackageList.fromJson $json");
+    this.packageList = json;
+  }
+
+  Map<String,dynamic> toJson(){
+    final Map<String,dynamic> data = new Map();
+    if(this.packageList!=null){
+      data['data'] = this.packageList?.map((v) => v?.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+
 class PackageListItemModel {
   int? id;
   String? name;

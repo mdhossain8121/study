@@ -9,8 +9,6 @@ class ApiResponseModel<T> {
     if (json['data'] != null) {
       data = fromJsonT(json['data']);
     }
-
-    this.data = data;
     status = json['status'];
     message = json['message'];
   }

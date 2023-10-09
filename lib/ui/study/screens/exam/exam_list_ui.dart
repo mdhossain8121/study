@@ -52,7 +52,7 @@ class ExamListUiState extends State<ExamListUi>{
                   if(state.examList.data!=null){
                     return _viewSuccess(context, state.examList.data!);
                   }else{
-                    return NoDataFound(message: state.examList.message);
+                    return NoDataFound(message: state.examList.message??"No Exam found");
                   }
                 } else if(state is ExamBlocFailState) {
                   return ErrorMessage(message: state.message);

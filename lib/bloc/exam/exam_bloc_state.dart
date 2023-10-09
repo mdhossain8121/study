@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:study/model/study/api_pagination_response_model.dart';
 
-import '../../model/study/exam_list_Item_model.dart';
+import 'package:study/model/study/exam_list_Item_model.dart';
 
 abstract class ExamBlocState extends Equatable{
 

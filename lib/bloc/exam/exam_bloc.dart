@@ -19,15 +19,12 @@ class ExamBloc extends Bloc<ExamBlocEvent,ExamBlocState>{
           if(response.data!=null && response.data?.isNotEmpty==true){
             emit(ExamBlocSuccessState(response));
           }else{
-            print("response.data==null && response.data?.isEmpty==true");
             emit(ExamBlocFailState(response.message??AppConstants.apiError));
           }
         }else{
-          print("response==null");
           emit(ExamBlocFailState(AppConstants.apiError));
         }
       }catch(ex){
-        print("catch here $ex");
         emit(ExamBlocFailState(AppConstants.appError));
       }
     });

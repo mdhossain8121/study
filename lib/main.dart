@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:study/bloc/exam/exam_bloc.dart';
 import 'package:study/bloc/login/login_bloc.dart';
+import 'package:study/bloc/package/package_bloc.dart';
 import 'package:study/firebase_options.dart';
 import 'package:study/provider/user_provider.dart';
 import 'package:study/repo/local/shared_preferences.dart';
@@ -58,6 +59,9 @@ class StudyApp extends StatelessWidget{
           ),
           BlocProvider<ExamBloc>(
               create: (BuildContext context) => ExamBloc()
+          ),
+          BlocProvider<PackageBloc>(
+              create: (BuildContext context) => PackageBloc()
           )
         ],
         child: MaterialApp(
